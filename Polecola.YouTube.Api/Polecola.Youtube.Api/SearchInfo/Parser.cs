@@ -28,11 +28,28 @@ namespace Polecola.Youtube.Api.SearchInfo
                         null;
                     if (context == null) return null;
                     var initdata = JObject.Parse(data);
+                    string? continuationToken = null;
+                    var sectionListRenderer = initdata["contents"]?["twoColumnSearchResultsRenderer"]?["primaryContents"]?[
+                        "sectionListRenderer"];
+                    var contents = sectionListRenderer?["contents"];
+                    if (contents is JArray contentsArray)
+                    {
+                        foreach (var contentToken in contentsArray)
+                        {
+                            if (contentToken is not JObject contentObject) continue;
+                            if(!contentObject.ContainsKey("continuationItemRenderer")) continue;
+                            continuationToken =
+                                contentObject["continuationItemRenderer"]?["continuationEndpoint"]?["continuationCommand"]?
+                                    ["token"]?.ToObject<string>() ?? continuationToken; 
+                        }
+                    }
+                    if (continuationToken == null) return null;
                     return new Models.SearchInfo()
                     {
                         ApiToken = apiToken,
                         Context = context,
                         InitData = initdata,
+                        ContinuationToken = continuationToken
                     };
                 }
             }

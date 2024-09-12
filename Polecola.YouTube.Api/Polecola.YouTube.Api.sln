@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polecola.Youtube.Api", "Polecola.Youtube.Api\Polecola.Youtube.Api.csproj", "{3D643589-6588-4405-80D4-EFDC3189E5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polecola.YouTube.Api.Test", "Polecola.YouTube.Api.Test\Polecola.YouTube.Api.Test.csproj", "{0D57F8DA-CC01-4ED5-A348-8690028AEC31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D643589-6588-4405-80D4-EFDC3189E5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D643589-6588-4405-80D4-EFDC3189E5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D643589-6588-4405-80D4-EFDC3189E5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D643589-6588-4405-80D4-EFDC3189E5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D57F8DA-CC01-4ED5-A348-8690028AEC31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D57F8DA-CC01-4ED5-A348-8690028AEC31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D57F8DA-CC01-4ED5-A348-8690028AEC31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D57F8DA-CC01-4ED5-A348-8690028AEC31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
